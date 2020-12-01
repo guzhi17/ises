@@ -8,6 +8,7 @@ const(
 	STNone ConnectionTypes = iota
 	STTcp
 	STTls
+	STUdp
 	STHttp
 	STWebsocket
 )
