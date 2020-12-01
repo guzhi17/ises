@@ -27,6 +27,4 @@ type Request interface {
 	Request(proto.Message)error
 }
 
-func main() {
-	//net.Addr
-}
+type RequestHandler func(Request)error
