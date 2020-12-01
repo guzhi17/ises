@@ -17,8 +17,8 @@ type Session interface {
 }
 
 type Response interface {
-	ResponseOK(proto.Message, ...int32)
-	ResponseError(code int32, msg string)
+	ResponseOK(proto.Message, ...int32) error
+	ResponseError(code int32, msg string) error
 }
 
 type Request interface {
