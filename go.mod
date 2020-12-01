@@ -1,4 +1,4 @@
-module ises
+module github.com/guzhi17/ises
 
 go 1.15
 
