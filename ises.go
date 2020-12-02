@@ -27,4 +27,11 @@ type Request interface {
 	Request(proto.Message)error
 }
 
+type Handler interface {
+	ServeISes(req Request)error
+}
 type HandlerFunc func(Request)error
+
+func (h HandlerFunc)ServeISes(req Request)error {
+	return h(req)
+}
