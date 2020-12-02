@@ -7,7 +7,7 @@ import (
 )
 
 type IHandlerGenerator interface {
-	GetHandler(values url.Values) RequestHandler
+	GetHandler(values url.Values) HandlerFunc
 }
 
 
@@ -15,13 +15,6 @@ type HandlerManager struct {
 	sync.RWMutex
 	handlers map[string]IHandlerGenerator
 }
-
-
-var(
-	gManager = &HandlerManager{
-		handlers: map[string]IHandlerGenerator{},
-	}
-)
 
 //
 //func init()  {
@@ -62,6 +55,14 @@ func (h *HandlerManager)Get(k string)IHandlerGenerator{
 
 //-----------------------------------------------------------------------
 
+
+
+/*
+var(
+	gManager = &HandlerManager{
+		handlers: map[string]IHandlerGenerator{},
+	}
+)
 //apis
 func Register(k string, v IHandlerGenerator){
 	log.Println("register:", k)
@@ -76,6 +77,7 @@ func UnRegister(k string)IHandlerGenerator{
 func GetHandlerGenerator(k string)IHandlerGenerator{
 	return gManager.Get(k)
 }
+*/
 
 
 //-----------------------------------------------------------------------

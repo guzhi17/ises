@@ -27,4 +27,4 @@ type Request interface {
 	Request(proto.Message)error
 }
 
-type RequestHandler func(Request)error
+type HandlerFunc func(Request)error
