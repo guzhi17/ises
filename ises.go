@@ -25,6 +25,7 @@ type Request interface {
 	Session
 	Response
 	Request(proto.Message)error
+	GetSession()Session
 }
 
 type Handler interface {
